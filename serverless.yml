@@ -13,7 +13,7 @@ functions:
     image: hello-world:0.1
 
 plugins:
-  - serverless-openfaas
+  - serverless-gestalt
 
 package:
   artifact: none
