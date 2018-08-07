@@ -1,19 +1,30 @@
 service: gestalt-hello-world
-
 provider:
   name: gestalt
-  token: ddd862e7-4748-4aee-ac11-f136e183c879-fake
-  org: root
-  environment: e0690bee-eb2e-4f74-ac5b-82b4c03e467c 
-  runtime: node
-
+  context: /engineering/jay-bee/qa
+  laser: laser
+  api: test
 functions:
-  hello-world:
-    handler: ./hello-world
-    image: hello-world:0.1
-
+ - name: hello-world1
+   description: "This is a lambda that returns hello"
+   runtime: nodejs
+   handler: ./handler.js
+   package-url: https://github.com/GalacticFog/serverless-gestalt-hello-world
+   compressed: false
+   headers:
+     Accept: text/plain
+     Content-Type: application/json
+   endpoint:
+     path: /my-app
+     methods: ["GET", "PUT", "POST", "DELETE"]
+     secure: false
+     synchronous: true
+     rate-limit: 60
+   timeout: 60
+   memory: 128
+   cpus: 0.1
+   public: true
+   variables:
+     HELLO: world
 plugins:
-  - serverless-gestalt
-
-package:
-  artifact: none
+- serverless-gestalt
