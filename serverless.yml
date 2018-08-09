@@ -5,26 +5,26 @@ provider:
   laser: laser
   api: test
 functions:
- - name: hello-world1
-   description: "This is a lambda that returns hello"
-   runtime: nodejs
-   handler: ./handler.js
-   package-url: https://github.com/GalacticFog/serverless-gestalt-hello-world
-   compressed: false
-   headers:
-     Accept: text/plain
-     Content-Type: application/json
-   endpoint:
-     path: /my-app
-     methods: ["GET", "PUT", "POST", "DELETE"]
-     secure: false
-     synchronous: true
-     rate-limit: 60
-   timeout: 60
-   memory: 128
-   cpus: 0.1
-   public: true
-   variables:
-     HELLO: world
+  hello-world:
+    description: "This is a lambda that returns hello world"
+    runtime: nodejs
+    handler: handler.js;run
+    package-url: https://github.com/GalacticFog/serverless-gestalt-hello-world
+    compressed: false
+    headers:
+      Accept: text/plain
+      Content-Type: application/json
+    endpoint:
+      path: /hello-world
+      methods: ['GET']
+      secure: false
+      synchronous: true
+      rate-limit: 60
+    timeout: 60
+    memory: 128
+    cpus: 0.1
+    public: true
+    variables:
+      HELLO: world
 plugins:
 - serverless-gestalt
