@@ -1,4 +1,5 @@
-service: gestalt-hello-world
+service:
+  name: gestalt-hello-world
 provider:
   name: gestalt
   context: /engineering/jay-bee/qa
@@ -8,7 +9,7 @@ functions:
   hello-world:
     description: "This is a lambda that returns hello world"
     runtime: nodejs
-    handler: handler.js;run
+    handler: ./handler.js
     package-url: https://github.com/GalacticFog/serverless-gestalt-hello-world
     compressed: false
     headers:
@@ -26,5 +27,3 @@ functions:
     public: true
     variables:
       HELLO: world
-plugins:
-- serverless-gestalt
