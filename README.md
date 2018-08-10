@@ -3,6 +3,17 @@ starter for gestalt serverless provider plugin
 
 Make sure you have the [serverless-gestalt](https://github.com/GalacticFog/serverless-gestalt) provider plugin installed
 
+## Configure
+You will need to point the serverless.yml to your Gestalt context. Edit the following lines in the `provider` section
+
+```
+provider:
+  ...
+  context: /fqon/workspace.name/environment.name
+  ...
+  api: api-name # the name of the api under the context
+```
+
 ## To Install
 
 ```
