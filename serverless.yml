@@ -13,7 +13,7 @@ functions:
     package-url: https://raw.githubusercontent.com/GalacticFog/serverless-gestalt-hello-world/master/handler.js
     compressed: false
     headers:
-      Accept: text/plain
+      Accept: application/json
       Content-Type: application/json
     endpoint:
       path: /hello-world
