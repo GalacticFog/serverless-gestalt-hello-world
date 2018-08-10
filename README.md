@@ -14,7 +14,7 @@ provider:
   api: api-name # the name of the api under the context
 ```
 
-## To Install
+## Install
 
 ```
 serverless install --url https://github.com/GalacticFog/serverless-gestalt-hello-world
