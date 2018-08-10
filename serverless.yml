@@ -27,3 +27,5 @@ functions:
     public: true
     variables:
       HELLO: world
+plugins: 
+  - serverless-gestalt
