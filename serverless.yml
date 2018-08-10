@@ -9,7 +9,7 @@ functions:
   hello-world:
     description: "This is a lambda that returns hello world"
     runtime: nodejs
-    handler: ./handler.js
+    handler: hello
     package-url: https://raw.githubusercontent.com/GalacticFog/serverless-gestalt-hello-world/master/handler.js
     compressed: false
     headers:
