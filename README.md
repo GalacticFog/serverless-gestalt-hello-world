@@ -9,8 +9,8 @@ You will need to point the serverless.yml to your Gestalt context. Edit the foll
 ```
 provider:
   ...
-  context: /fqon/workspace.name/environment.name
-  ...
+  context: /fqon/workspace.name/environment.name # your context path
+  laser: laser-provider-name # the name of the laser provider
   api: api-name # the name of the api under the context
 ```
 
