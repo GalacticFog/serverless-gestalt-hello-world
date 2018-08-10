@@ -10,7 +10,7 @@ functions:
     description: "This is a lambda that returns hello world"
     runtime: nodejs
     handler: ./handler.js
-    package-url: https://github.com/GalacticFog/serverless-gestalt-hello-world
+    package-url: https://raw.githubusercontent.com/GalacticFog/serverless-gestalt-hello-world/master/handler.js
     compressed: false
     headers:
       Accept: text/plain
@@ -26,6 +26,6 @@ functions:
     cpus: 0.1
     public: true
     variables:
-      HELLO: world
+      GREETING: Greetings from Galactic Fog!
 plugins: 
   - serverless-gestalt
